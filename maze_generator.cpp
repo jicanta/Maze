@@ -24,11 +24,11 @@ struct DisjointSetUnion {
         parent = std::vector<int>(N, -1);
     }
 
-    int find(int x){
+    int find(int x) {
         return parent[x] < 0 ? x : parent[x] = find(parent[x]);
     }
 
-    bool unite(int x, int y){
+    bool unite(int x, int y) {
         x = find(x), y = find(y);
         if(x == y) return 0;
         if(parent[x] > parent[y]) {
