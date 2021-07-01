@@ -68,6 +68,7 @@ int main() {
     for(int i = 0; i < n; ++i) {
         std::cin >> maze[i];
     }
+    
     std::vector<char> path;
     std::cout << bfs(maze, path) << std::endl;
     std::reverse(begin(path), end(path));
